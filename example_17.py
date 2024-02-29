@@ -9,6 +9,7 @@ import sys
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("The password length is not given!", file=sys.stderr)
+        sys.exit(1)
 
     chars = string.ascii_letters + string.punctuation + string.digits
     length_pwd = int(sys.argv[1])
