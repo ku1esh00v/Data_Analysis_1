@@ -6,7 +6,7 @@ import sys
 def cat_files(file_names):
     for file_name in file_names:
         try:
-            with open(file_name, 'r', encoding='utf-8') as file:
+            with open(file_name, 'r', encoding='utf-8', buffering=1024) as file:
                 print(file.read())
         except FileNotFoundError:
             print(f"Не удалось открыть файл: {file_name}")
